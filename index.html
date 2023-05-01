@@ -225,6 +225,32 @@ function traditionalDice() {
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Podmínkový operátor</h2>
+			<p>Kromě podmínkového příkazu (<code>if</code>) v JavaScriptu existuje i podmínkový operátor. Často se o něm
+				hovoří jako o ternárním operátoru, což sice technicky vzato vyjadřuje pouze to, že má tři operandy,
+				nicméně jelikož je to v JavaScriptu jediný operátor s touto vlastností, vžilo se pro něj toto obecné
+				pojmenování. Hodí se v situaci, kdy při splnění určité podmínky potřebujeme použít jednu hodnotu,
+				zatímco při jejím nesplnění hodnotu jinou.</p>
+			<pre><code class="language-javascript">
+const age = Number(prompt("Zadej věk uživatele:"));
+const isAdultText = age &gt;= 18 ? "je" : "není";
+console.log(`Uživatel ${isAdultText} plnoletý.`);
+// alternative, even shorter possibility:
+console.log(`Uživatel ${age &gt;= 18 ? "je" : "není"} plnoletý.`);
+			</code></pre>
+			<pre><code class="language-javascript">
+const age = Number(prompt("Zadej věk uživatele:"));
+let isAdultText;
+if (age &gt;= 18) {
+	isAdultText = "je";
+} else {
+	isAdultText = "není";
+}
+console.log(`Uživatel ${isAdultText} plnoletý.`);
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
