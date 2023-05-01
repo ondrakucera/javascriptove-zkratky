@@ -42,6 +42,20 @@ console.log("Součet čísel " + number1 + " a " + number2 + " je " + number3 + 
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Výsledek volání funkce jako argument volání další funkce</h2>
+			<p>Často potřebujeme výsledek volání jedné funkce pouze k tomu, abychom jej předali funkci jiné. Mohli
+				bychom si jej sice uložit do pomocné proměnné, ale pokud jej nepotřebujeme později ještě na něco jiného,
+				obvykle se to nedělá.</p>
+			<pre><code class="language-javascript">
+const age = Number(prompt("Zadej věk:"));
+			</code></pre>
+			<pre><code class="language-javascript">
+const ageString = prompt("Zadej věk:");
+const age = Number(ageString);
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
