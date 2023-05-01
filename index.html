@@ -118,6 +118,28 @@ function arithmeticMean(number1, number2) {
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Vracení pravdivostních hodnot</h2>
+			<p>Výsledky nejrůznějších porovnání jsou výrazy jako jakékoliv jiné a jejich výsledkem je pravdivostní
+				hodnota. Tu můžeme tedy například přiřadit do libovolné proměnné. Jakkoliv i to se občas hodí, daleko
+				častější je potřeba takovou hodnotu vrátit z funkce, kdy tedy není nutné tvořit okolo porovnání
+				samostatnou podmínku a z ní explicitně vracet <code>true</code> nebo <code>false</code>.</p>
+			<pre><code class="language-javascript">
+function isOdd(number) {
+	return number % 2 === 1;
+}
+			</code></pre>
+			<pre><code class="language-javascript">
+function isOdd(number) {
+	if (number % 2 === 1) {
+		return true;
+	} else {
+		return false;
+	}
+}
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
