@@ -278,6 +278,23 @@ console.log(dice(10));
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Destrukturalizace parametrů funkcí</h2>
+			<p>Je-li parametrem funkce objekt (případně pole), můžeme provést destrukturalizaci tohoto parametru rovnou
+				v hlavičce funkce. Tato možnost se často hodí například u funkcí, které jsou reactovými komponentami.</p>
+			<pre><code class="language-javascript">
+const User = ({firstName, lastName, age}) =&gt; {
+	// do something with firstName, lastName, and age
+}
+			</code></pre>
+			<pre><code class="language-javascript">
+const User = (props) =&gt; {
+	const {firstName, lastName, age} = props;
+	// do something with firstName, lastName, and age
+}
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
