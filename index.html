@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Javascriptové zkratky</title>
+		<link href="prism.css" rel="stylesheet"/>
+		<link href="style.css" rel="stylesheet"/>
+	</head>
+	<body class="line-numbers">
+		<h1>Javascriptové zkratky</h1>
+
+		<p>Tato stránka slouží jako rozšiřující materiál k javascriptovým kurzům pořádaným <a
+		href="https://www.czechitas.cz/">Czechitas</a> nebo <a href="https://reactgirls.com/">ReactGirls</a>. Na nich
+		dáváme důraz především na naprostou srozumitelnost prezentovaných ukázek, i za cenu o něco delšího
+		zápisu. Zároveň vždy není dostatek času ke každé konstrukci ukázat nebo dostatečně procvičit všechny
+		alternativní zápisy. V pozdější praxi (nebo při studiu materiálů jiných autorů) však každý na ony zkrácené
+		varianty dříve či později narazí. Cílem této stránky je tedy shrnout nejběžnější takovéto momenty.</p>
+
+		<p>Každá sekce obsahuje stručný popis situace a následně dva ekvivalentní (pokud možno) bloky kódu. První z nich
+		obsahuje zkrácenou variantu určitého zápisu, která nemusí být začátečníkům na první pohled zřejmá (zvláště v
+		kontextu nějakého delšího programu), případně o ní nemuseli vždy vůbec slyšet. Druhý blok obsahuje týž kód
+		rozepsán podrobněji tak, aby situaci vysvětloval.</p>
+
+		<section>
+			<h2>Šablony řetězců</h2>
+			<p>Šablony se používají v situacích, kdy je potřeba vytvořit řetězec obsahující hodnoty nějakých proměnných
+				(přesněji řečeno se v šabloně můžeme odkazovat na libovolný výraz, ale použití proměnných bývá
+				nejčastější). Výsledek je podobný, jako kdybychom použili skládání řetězců operátorem <code>+</code>,
+				pouze je použitý kód obvykle srozumitelnější.</p>
+			<pre><code class="language-javascript">
+const number1 = 3;
+const number2 = 5;
+const number3 = number1 + number2;
+console.log(`Součet čísel ${number1} a ${number2} je ${number3}.`);
+			</code></pre>
+			<pre><code class="language-javascript">
+const number1 = 3;
+const number2 = 5;
+const number3 = number1 + number2;
+console.log("Součet čísel " + number1 + " a " + number2 + " je " + number3 + ".");
+			</code></pre>
+		</section>
+
+		<script src="prism.js"></script>
+	</body>
+</html>
