@@ -140,6 +140,24 @@ function isOdd(number) {
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Anonymní funkce přiřazená do proměnné</h2>
+			<p>Funkce můžeme „pojmenovat“ rovněž trikem, kdy funkci vytvoříme jako anonymní, ale zároveň ji přiřadíme do
+				nějaké proměnné (v naší ukázce do konstanty). Tento způsob používá málokdy, ale ukazuje důležitou
+				vlastnost funkcí v JavaScriptu, totiž že funkce jsou obyčejnými hodnotami podobně jako třeba čísla nebo
+				řetězce. Navíc naprosto stejný způsob se používá při zápisu funkcí tzv. šipkovou notací.</p>
+			<pre><code class="language-javascript">
+const greetUser = function (userName) {
+	alert(`Hello, ${userName}!`);
+}
+			</code></pre>
+			<pre><code class="language-javascript">
+function greetUser(userName) {
+	alert(`Hello, ${userName}!`);
+}
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
