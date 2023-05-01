@@ -251,6 +251,33 @@ console.log(`Uživatel ${isAdultText} plnoletý.`);
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Výchozí hodnoty parametrů funkcí</h2>
+			<p>Pokud funkci při volání předáme méně hodnot, než je jejích parametrů, ostatní parametry budou mít hodnotu
+				<code>undefined</code>. Můžeme ovšem i určit, že určité parametry mají v takové situaci mít hodnotu
+				jinou.</p>
+			<pre><code class="language-javascript">
+function randomInteger(minimum, maximum) {
+	return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+}
+function dice(sides = 6) {
+	return randomInteger(1, sides);
+}
+console.log(dice());
+console.log(dice(10));
+			</code></pre>
+			<pre><code class="language-javascript">
+function randomInteger(minimum, maximum) {
+	return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+}
+function dice(sides) {
+	return randomInteger(1, sides !== undefined ? sides : 6);
+}
+console.log(dice());
+console.log(dice(10));
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
