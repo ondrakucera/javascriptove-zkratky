@@ -202,6 +202,29 @@ function means(number1, number2) {
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Parametry šipkových funkcí</h2>
+			<p>V případě, že má šipková funkce jediný parametr, není jej nutné psát do závorek. Vzhledem k tomu, že ale
+				toto platí skutečně pouze pro situaci, kdy má funkce právě jeden parametr, většina lidí jej dá do
+				závorek i v tomto případě.</p>
+			<pre><code class="language-javascript">
+const randomInteger = (minimum, maximum) =&gt; Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+const generalDice = sides =&gt; randomInteger(1, sides);
+const traditionalDice = () =&gt; generalDice(6);
+			</code></pre>
+			<pre><code class="language-javascript">
+function randomInteger(minimum, maximum) {
+	return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+}
+function generalDice(sides) {
+	return randomInteger(1, sides);
+}
+function traditionalDice() {
+	return generalDice(6);
+}
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
