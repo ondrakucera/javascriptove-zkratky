@@ -56,6 +56,33 @@ const age = Number(ageString);
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Aritmetika s přiřazením</h2>
+			<p>Pro situace, kdy potřebujeme k hodnotě určité číselné proměnné přičíst jiné číslo, existuje samostatný
+				operátor. Podobně je tomu i pro další aritmetické operátory. Navíc stejného zápisu lze použít i pro
+				spojování řetězců.</p>
+			<pre><code class="language-javascript">
+let number = 3;
+number += 5; // 8
+number -= 2; // 6
+number *= 4; // 24
+number /= 3; // 8
+number %= 3; // 2
+let string = "Hello";
+string += " world!"; // "Hello world!"
+			</code></pre>
+			<pre><code class="language-javascript">
+let number = 3;
+number = number + 5; // 8
+number = number - 2; // 6
+number = number * 4; // 24
+number = number / 3; // 8
+number = number % 3; // 2
+let string = "Hello";
+string = string + " world!"; // "Hello world!"
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
