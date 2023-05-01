@@ -101,6 +101,23 @@ number2 -= 1; // 1
 			</code></pre>
 		</section>
 
+		<section>
+			<h2>Výraz jako návratová hodnota funkce</h2>
+			<p>Návratovou hodnotu funkce není vždy potřeba si předem uložit do nějaké proměnné (jakkoliv je to často
+				užitečné). Za klíčové slovo <code>return</code> je možné napsat jakýkoliv výraz.</p>
+			<pre><code class="language-javascript">
+function arithmeticMean(number1, number2) {
+	return (number1 + number2) / 2;
+}
+			</code></pre>
+			<pre><code class="language-javascript">
+function arithmeticMean(number1, number2) {
+	const result = (number1 + number2) / 2;
+	return result;
+}
+			</code></pre>
+		</section>
+
 		<script src="prism.js"></script>
 	</body>
 </html>
