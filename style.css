@@ -1,3 +1,22 @@
+/* Document styles */
+
+html {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+a {
+	color: dodgerblue;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+
+/* Prism styles */
+
 .token.operator {
+	/* Make operators NOT have a different background from the rest of the code */
 	background-color: inherit;
 }
