@@ -22,7 +22,7 @@
 		kontextu nějakého delšího programu), případně o ní nemuseli vždy vůbec slyšet. Druhý blok obsahuje týž kód
 		rozepsán podrobněji tak, aby situaci vysvětloval.</p>
 
-		<section>
+		<section id="template-literal">
 			<h2>Šablony řetězců</h2>
 			<p>Šablony se používají v situacích, kdy je potřeba vytvořit řetězec obsahující hodnoty nějakých proměnných
 				(přesněji řečeno se v šabloně můžeme odkazovat na libovolný výraz, ale použití proměnných bývá
@@ -42,7 +42,7 @@ console.log("Součet čísel " + number1 + " a " + number2 + " je " + number3 + 
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="function-composition">
 			<h2>Výsledek volání funkce jako argument volání další funkce</h2>
 			<p>Často potřebujeme výsledek volání jedné funkce pouze k tomu, abychom jej předali funkci jiné. Mohli
 				bychom si jej sice uložit do pomocné proměnné, ale pokud jej nepotřebujeme později ještě na něco jiného,
@@ -56,7 +56,7 @@ const age = Number(ageString);
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="arithmetic-assignment">
 			<h2>Aritmetika s přiřazením</h2>
 			<p>Pro situace, kdy potřebujeme k hodnotě určité číselné proměnné přičíst jiné číslo, existuje samostatný
 				operátor. Podobně je tomu i pro další aritmetické operátory. Navíc stejného zápisu lze použít i pro
@@ -83,7 +83,7 @@ string = string + " world!"; // "Hello world!"
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="increment-decrement">
 			<h2>Inkrementace a dekrementace</h2>
 			<p>Speciálním a velmi častým případem modifikace hodnoty číselné proměnné je její inkrementace nebo
 				dekrementace, pro které tak vznikly samostatné operátory.</p>
@@ -101,7 +101,7 @@ number2 -= 1; // 1
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="return-expression">
 			<h2>Výraz jako návratová hodnota funkce</h2>
 			<p>Návratovou hodnotu funkce není vždy potřeba si předem uložit do nějaké proměnné (jakkoliv je to často
 				užitečné). Za klíčové slovo <code>return</code> je možné napsat jakýkoliv výraz.</p>
@@ -118,7 +118,7 @@ function arithmeticMean(number1, number2) {
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="boolean-return-expression">
 			<h2>Vracení pravdivostních hodnot</h2>
 			<p>Výsledky nejrůznějších porovnání jsou výrazy jako jakékoliv jiné a jejich výsledkem je pravdivostní
 				hodnota. Tu můžeme tedy například přiřadit do libovolné proměnné. Jakkoliv i to se občas hodí, daleko
@@ -140,7 +140,7 @@ function isOdd(number) {
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="anonymous-function-assignment">
 			<h2>Anonymní funkce přiřazená do proměnné</h2>
 			<p>Funkce můžeme „pojmenovat“ rovněž trikem, kdy funkci vytvoříme jako anonymní, ale zároveň ji přiřadíme do
 				nějaké proměnné (v naší ukázce do konstanty). Tento způsob používá málokdy, ale ukazuje důležitou
@@ -158,7 +158,7 @@ function greetUser(userName) {
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="arrow-function">
 			<h2>Funkce definovaná šipkovou notací</h2>
 			<p>Funkce můžeme zapisovat rovněž tzv. šipkovou notací.</p>
 			<pre><code class="language-javascript">
@@ -173,7 +173,7 @@ function greetUser(userName) {
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="arrow-function-concise-body">
 			<h2>Šipková funkce se zkráceným tělem</h2>
 			<p>V případě, že šipková funkce ihned vrací nějakou hodnotu, nemusíme za šipku psát blok obsahující příkaz
 				<code>return</code>. Stačí za šipku napsat pouze výraz vyjadřující návratovou hodnotu. Pozor je ovšem
@@ -202,7 +202,7 @@ function means(number1, number2) {
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="arrow-function-parameters">
 			<h2>Parametry šipkových funkcí</h2>
 			<p>V případě, že má šipková funkce jediný parametr, není jej nutné psát do závorek. Vzhledem k tomu, že ale
 				toto platí skutečně pouze pro situaci, kdy má funkce právě jeden parametr, většina lidí jej dá do
@@ -225,7 +225,7 @@ function traditionalDice() {
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="conditional-operator">
 			<h2>Podmínkový operátor</h2>
 			<p>Kromě podmínkového příkazu (<code>if</code>) v JavaScriptu existuje i podmínkový operátor. Často se o něm
 				hovoří jako o ternárním operátoru, což sice technicky vzato vyjadřuje pouze to, že má tři operandy,
@@ -251,7 +251,7 @@ console.log(`Uživatel ${isAdultText} plnoletý.`);
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="default-parameter-value">
 			<h2>Výchozí hodnoty parametrů funkcí</h2>
 			<p>Pokud funkci při volání předáme méně hodnot, než je jejích parametrů, ostatní parametry budou mít hodnotu
 				<code>undefined</code>. Můžeme ovšem i určit, že určité parametry mají v takové situaci mít hodnotu
@@ -278,7 +278,7 @@ console.log(dice(10));
 			</code></pre>
 		</section>
 
-		<section>
+		<section id="destructuring-function-parameters">
 			<h2>Destrukturalizace parametrů funkcí</h2>
 			<p>Je-li parametrem funkce objekt (případně pole), můžeme provést destrukturalizaci tohoto parametru rovnou
 				v hlavičce funkce. Tato možnost se často hodí například u funkcí, které jsou reactovými komponentami.</p>
